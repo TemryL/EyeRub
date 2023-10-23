@@ -1,0 +1,833 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		800519CA2A4B40E800B3A5B1 /* LabeledAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800519C92A4B40E800B3A5B1 /* LabeledAction.swift */; };
+		8010A142299EC84E007F3CD9 /* LabelEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8010A141299EC84E007F3CD9 /* LabelEncoder.swift */; };
+		8010A143299EC84E007F3CD9 /* LabelEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8010A141299EC84E007F3CD9 /* LabelEncoder.swift */; };
+		802379F329A9010000D95010 /* ModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802379F229A9010000D95010 /* ModeView.swift */; };
+		802379F729A9037700D95010 /* PredictionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802379F629A9037700D95010 /* PredictionsView.swift */; };
+		802379FB29A91A3000D95010 /* PredictionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802379FA29A91A3000D95010 /* PredictionManager.swift */; };
+		80334F4B2AD73D6600C83002 /* TransformerClassifierLeft.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 80334F492AD73D6600C83002 /* TransformerClassifierLeft.mlmodel */; };
+		80334F4C2AD73D6600C83002 /* TransformerClassifierRight.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 80334F4A2AD73D6600C83002 /* TransformerClassifierRight.mlmodel */; };
+		803B66AC2A9FBA30004C8892 /* SignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803B66AB2A9FBA30004C8892 /* SignInButton.swift */; };
+		804360D82AAB702100B9DD9E /* AuthentificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804360D72AAB702100B9DD9E /* AuthentificationController.swift */; };
+		8043986A2A5F1D740002446D /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804398692A5F1D740002446D /* StatisticsView.swift */; };
+		8043986C2A5F240F0002446D /* GoogleAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8043986B2A5F240F0002446D /* GoogleAuthController.swift */; };
+		8043986F2A5F25C40002446D /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = 8043986E2A5F25C40002446D /* GoogleSignIn */; };
+		804398712A5F25C40002446D /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 804398702A5F25C40002446D /* GoogleSignInSwift */; };
+		804AAB922ADF1CFC001E824D /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804AAB912ADF1CFC001E824D /* Action.swift */; };
+		804CA2512A5EE5C60009781E /* DailySummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804CA2502A5EE5C60009781E /* DailySummaryView.swift */; };
+		8062B1632943F5990036E2DC /* WorkoutManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8062B1622943F5990036E2DC /* WorkoutManager.swift */; };
+		8062B1652943F5AD0036E2DC /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8062B1642943F5AD0036E2DC /* DataManager.swift */; };
+		8062B1672943F5C80036E2DC /* LabelsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8062B1662943F5C80036E2DC /* LabelsView.swift */; };
+		8062B1692943F5DF0036E2DC /* SessionPagingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8062B1682943F5DF0036E2DC /* SessionPagingView.swift */; };
+		8062B16B2943F5EE0036E2DC /* SummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8062B16A2943F5EE0036E2DC /* SummaryView.swift */; };
+		8062B1712943F6350036E2DC /* ElapsedTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8062B1702943F6350036E2DC /* ElapsedTimeView.swift */; };
+		8062B1732943F6450036E2DC /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8062B1722943F6450036E2DC /* StartView.swift */; };
+		8068818C2AC886900029DC57 /* ModeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8068818B2AC886900029DC57 /* ModeInfoView.swift */; };
+		807679C1299E4F7A00943263 /* LabelingSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807679C0299E4F7A00943263 /* LabelingSummaryView.swift */; };
+		8076A48B2AB59774003D044F /* DeleteAccountButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8076A48A2AB59774003D044F /* DeleteAccountButton.swift */; };
+		8076A48D2AB59821003D044F /* ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8076A48C2AB59821003D044F /* ErrorHandler.swift */; };
+		807DD470295F619B0012BEFC /* ModelConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807DD46F295F619B0012BEFC /* ModelConstants.swift */; };
+		807DD471295F619B0012BEFC /* ModelConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807DD46F295F619B0012BEFC /* ModelConstants.swift */; };
+		80A9C1692ADDD72600B19037 /* MonitoringSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80A9C1682ADDD72600B19037 /* MonitoringSummaryView.swift */; };
+		80AA5DC029AA301700F5CCB1 /* AppMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AA5DBF29AA301700F5CCB1 /* AppMode.swift */; };
+		80AA5DC129AA301700F5CCB1 /* AppMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AA5DBF29AA301700F5CCB1 /* AppMode.swift */; };
+		80B93998298D6BF9005CF083 /* CountdownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80B93997298D6BF9005CF083 /* CountdownView.swift */; };
+		80CF69592ADA87F000A904CF /* MonitoredAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF69582ADA87F000A904CF /* MonitoredAction.swift */; };
+		80CF695B2ADA96CC00A904CF /* ModeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF695A2ADA96CC00A904CF /* ModeButton.swift */; };
+		80D0EF722A8785E2004A1C42 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D0EF6D2A8785E2004A1C42 /* LoginView.swift */; };
+		80D0EF732A8785E2004A1C42 /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D0EF6E2A8785E2004A1C42 /* LogoutButton.swift */; };
+		80D0EF742A8785E2004A1C42 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D0EF6F2A8785E2004A1C42 /* ContentView.swift */; };
+		80D0EF752A8785E2004A1C42 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D0EF702A8785E2004A1C42 /* ErrorView.swift */; };
+		80D0EF762A8785E2004A1C42 /* OpenRealmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D0EF712A8785E2004A1C42 /* OpenRealmView.swift */; };
+		80D0EF7A2A878B42004A1C42 /* AppConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80D0EF792A878B42004A1C42 /* AppConfig.swift */; };
+		80D0EF7C2A878B6D004A1C42 /* AtlasConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80D0EF7B2A878B6D004A1C42 /* AtlasConfig.plist */; };
+		80E60172295CACCA00A32C63 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E60171295CACCA00A32C63 /* WatchConnectivityManager.swift */; };
+		80E60173295CACCA00A32C63 /* WatchConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80E60171295CACCA00A32C63 /* WatchConnectivityManager.swift */; };
+		80F9D80E2A4B3BDC006A0AD8 /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 80F9D80D2A4B3BDC006A0AD8 /* Realm */; };
+		80F9D8102A4B3BDC006A0AD8 /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 80F9D80F2A4B3BDC006A0AD8 /* RealmSwift */; };
+		80FDAD942943F98B006735DD /* EyeRubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FDAD932943F98B006735DD /* EyeRubApp.swift */; };
+		80FE3ACB2943F44B00D813D8 /* EyeRubApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE3ACA2943F44B00D813D8 /* EyeRubApp.swift */; };
+		80FE3ACD2943F44B00D813D8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80FE3ACC2943F44B00D813D8 /* HomeView.swift */; };
+		80FE3ACF2943F44B00D813D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FE3ACE2943F44B00D813D8 /* Assets.xcassets */; };
+		80FE3AD22943F44B00D813D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FE3AD12943F44B00D813D8 /* Preview Assets.xcassets */; };
+		80FE3AD82943F44B00D813D8 /* EyeRub Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 80FE3AD72943F44B00D813D8 /* EyeRub Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		80FE3AE12943F44C00D813D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FE3AE02943F44C00D813D8 /* Assets.xcassets */; };
+		80FE3AE42943F44C00D813D8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80FE3AE32943F44C00D813D8 /* Preview Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		80FE3AD92943F44B00D813D8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80FE3ABF2943F44B00D813D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80FE3AD62943F44B00D813D8;
+			remoteInfo = "HandFaceInteraction Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		80FE3AEA2943F44C00D813D8 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				80FE3AD82943F44B00D813D8 /* EyeRub Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		800519C92A4B40E800B3A5B1 /* LabeledAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LabeledAction.swift; sourceTree = "<group>"; };
+		8010A141299EC84E007F3CD9 /* LabelEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelEncoder.swift; sourceTree = "<group>"; };
+		802379F229A9010000D95010 /* ModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeView.swift; sourceTree = "<group>"; };
+		802379F629A9037700D95010 /* PredictionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionsView.swift; sourceTree = "<group>"; };
+		802379FA29A91A3000D95010 /* PredictionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionManager.swift; sourceTree = "<group>"; };
+		80320A562AE3D8440047515D /* EyeRub.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = EyeRub.entitlements; sourceTree = "<group>"; };
+		80334F492AD73D6600C83002 /* TransformerClassifierLeft.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TransformerClassifierLeft.mlmodel; sourceTree = "<group>"; };
+		80334F4A2AD73D6600C83002 /* TransformerClassifierRight.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TransformerClassifierRight.mlmodel; sourceTree = "<group>"; };
+		803B66AB2A9FBA30004C8892 /* SignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButton.swift; sourceTree = "<group>"; };
+		804360D72AAB702100B9DD9E /* AuthentificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationController.swift; sourceTree = "<group>"; };
+		804398692A5F1D740002446D /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		8043986B2A5F240F0002446D /* GoogleAuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthController.swift; sourceTree = "<group>"; };
+		804AAB912ADF1CFC001E824D /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		804CA2502A5EE5C60009781E /* DailySummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailySummaryView.swift; sourceTree = "<group>"; };
+		8062B1622943F5990036E2DC /* WorkoutManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutManager.swift; sourceTree = "<group>"; };
+		8062B1642943F5AD0036E2DC /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		8062B1662943F5C80036E2DC /* LabelsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelsView.swift; sourceTree = "<group>"; };
+		8062B1682943F5DF0036E2DC /* SessionPagingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionPagingView.swift; sourceTree = "<group>"; };
+		8062B16A2943F5EE0036E2DC /* SummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryView.swift; sourceTree = "<group>"; };
+		8062B1702943F6350036E2DC /* ElapsedTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeView.swift; sourceTree = "<group>"; };
+		8062B1722943F6450036E2DC /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		8068818B2AC886900029DC57 /* ModeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeInfoView.swift; sourceTree = "<group>"; };
+		807679C0299E4F7A00943263 /* LabelingSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelingSummaryView.swift; sourceTree = "<group>"; };
+		8076A48A2AB59774003D044F /* DeleteAccountButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteAccountButton.swift; sourceTree = "<group>"; };
+		8076A48C2AB59821003D044F /* ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorHandler.swift; sourceTree = "<group>"; };
+		807DD46F295F619B0012BEFC /* ModelConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelConstants.swift; sourceTree = "<group>"; };
+		80A9C1682ADDD72600B19037 /* MonitoringSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoringSummaryView.swift; sourceTree = "<group>"; };
+		80AA5DBF29AA301700F5CCB1 /* AppMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppMode.swift; sourceTree = "<group>"; };
+		80ACDFD829A50E640052284E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		80B93997298D6BF9005CF083 /* CountdownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownView.swift; sourceTree = "<group>"; };
+		80CF69582ADA87F000A904CF /* MonitoredAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoredAction.swift; sourceTree = "<group>"; };
+		80CF695A2ADA96CC00A904CF /* ModeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeButton.swift; sourceTree = "<group>"; };
+		80D0EF6D2A8785E2004A1C42 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		80D0EF6E2A8785E2004A1C42 /* LogoutButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutButton.swift; sourceTree = "<group>"; };
+		80D0EF6F2A8785E2004A1C42 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		80D0EF702A8785E2004A1C42 /* ErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
+		80D0EF712A8785E2004A1C42 /* OpenRealmView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpenRealmView.swift; sourceTree = "<group>"; };
+		80D0EF792A878B42004A1C42 /* AppConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConfig.swift; sourceTree = "<group>"; };
+		80D0EF7B2A878B6D004A1C42 /* AtlasConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = AtlasConfig.plist; sourceTree = "<group>"; };
+		80E60171295CACCA00A32C63 /* WatchConnectivityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchConnectivityManager.swift; sourceTree = "<group>"; };
+		80FDAD932943F98B006735DD /* EyeRubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeRubApp.swift; sourceTree = "<group>"; };
+		80FDAD952943FA61006735DD /* EyeRub Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "EyeRub Watch App.entitlements"; sourceTree = "<group>"; };
+		80FDAD962943FA6E006735DD /* EyeRub-Watch-App-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EyeRub-Watch-App-Info.plist"; sourceTree = SOURCE_ROOT; };
+		80FE3AC72943F44B00D813D8 /* EyeRub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EyeRub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		80FE3ACA2943F44B00D813D8 /* EyeRubApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeRubApp.swift; sourceTree = "<group>"; };
+		80FE3ACC2943F44B00D813D8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		80FE3ACE2943F44B00D813D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		80FE3AD12943F44B00D813D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		80FE3AD72943F44B00D813D8 /* EyeRub Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "EyeRub Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		80FE3AE02943F44C00D813D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		80FE3AE32943F44C00D813D8 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		80FE3AC42943F44B00D813D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80F9D8102A4B3BDC006A0AD8 /* RealmSwift in Frameworks */,
+				80F9D80E2A4B3BDC006A0AD8 /* Realm in Frameworks */,
+				8043986F2A5F25C40002446D /* GoogleSignIn in Frameworks */,
+				804398712A5F25C40002446D /* GoogleSignInSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80FE3AD42943F44B00D813D8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		80148272295EFD39009219FB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				80D0EF6F2A8785E2004A1C42 /* ContentView.swift */,
+				80D0EF6D2A8785E2004A1C42 /* LoginView.swift */,
+				803B66AB2A9FBA30004C8892 /* SignInButton.swift */,
+				80D0EF712A8785E2004A1C42 /* OpenRealmView.swift */,
+				80FE3ACC2943F44B00D813D8 /* HomeView.swift */,
+				80D0EF6E2A8785E2004A1C42 /* LogoutButton.swift */,
+				8076A48A2AB59774003D044F /* DeleteAccountButton.swift */,
+				804CA2502A5EE5C60009781E /* DailySummaryView.swift */,
+				804398692A5F1D740002446D /* StatisticsView.swift */,
+				80D0EF702A8785E2004A1C42 /* ErrorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		80148273295EFD49009219FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8076A48C2AB59821003D044F /* ErrorHandler.swift */,
+				800519C92A4B40E800B3A5B1 /* LabeledAction.swift */,
+				80CF69582ADA87F000A904CF /* MonitoredAction.swift */,
+				8043986B2A5F240F0002446D /* GoogleAuthController.swift */,
+				804360D72AAB702100B9DD9E /* AuthentificationController.swift */,
+				804AAB912ADF1CFC001E824D /* Action.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		802379FE29A9209200D95010 /* MLModels */ = {
+			isa = PBXGroup;
+			children = (
+				80334F492AD73D6600C83002 /* TransformerClassifierLeft.mlmodel */,
+				80334F4A2AD73D6600C83002 /* TransformerClassifierRight.mlmodel */,
+			);
+			path = MLModels;
+			sourceTree = "<group>";
+		};
+		8062B15B2943F5040036E2DC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8062B1622943F5990036E2DC /* WorkoutManager.swift */,
+				802379FA29A91A3000D95010 /* PredictionManager.swift */,
+				8062B1642943F5AD0036E2DC /* DataManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8062B15C2943F50E0036E2DC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8062B1722943F6450036E2DC /* StartView.swift */,
+				802379F229A9010000D95010 /* ModeView.swift */,
+				80CF695A2ADA96CC00A904CF /* ModeButton.swift */,
+				8068818B2AC886900029DC57 /* ModeInfoView.swift */,
+				8062B1682943F5DF0036E2DC /* SessionPagingView.swift */,
+				80A9C1682ADDD72600B19037 /* MonitoringSummaryView.swift */,
+				8062B1702943F6350036E2DC /* ElapsedTimeView.swift */,
+				802379F629A9037700D95010 /* PredictionsView.swift */,
+				8062B16A2943F5EE0036E2DC /* SummaryView.swift */,
+				80A9C1672ADDD5DB00B19037 /* Labeling */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		80A9C1672ADDD5DB00B19037 /* Labeling */ = {
+			isa = PBXGroup;
+			children = (
+				8062B1662943F5C80036E2DC /* LabelsView.swift */,
+				807679C0299E4F7A00943263 /* LabelingSummaryView.swift */,
+				80B93997298D6BF9005CF083 /* CountdownView.swift */,
+			);
+			path = Labeling;
+			sourceTree = "<group>";
+		};
+		80E60170295CAC1D00A32C63 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				80E60171295CACCA00A32C63 /* WatchConnectivityManager.swift */,
+				807DD46F295F619B0012BEFC /* ModelConstants.swift */,
+				8010A141299EC84E007F3CD9 /* LabelEncoder.swift */,
+				80AA5DBF29AA301700F5CCB1 /* AppMode.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		80FE3ABE2943F44B00D813D8 = {
+			isa = PBXGroup;
+			children = (
+				80E60170295CAC1D00A32C63 /* Shared */,
+				80FE3AC92943F44B00D813D8 /* EyeRub */,
+				80FE3ADB2943F44B00D813D8 /* EyeRub Watch App */,
+				80FE3AC82943F44B00D813D8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80FE3AC82943F44B00D813D8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				80FE3AC72943F44B00D813D8 /* EyeRub.app */,
+				80FE3AD72943F44B00D813D8 /* EyeRub Watch App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		80FE3AC92943F44B00D813D8 /* EyeRub */ = {
+			isa = PBXGroup;
+			children = (
+				80320A562AE3D8440047515D /* EyeRub.entitlements */,
+				80ACDFD829A50E640052284E /* Info.plist */,
+				80D0EF7B2A878B6D004A1C42 /* AtlasConfig.plist */,
+				80FE3ACA2943F44B00D813D8 /* EyeRubApp.swift */,
+				80D0EF792A878B42004A1C42 /* AppConfig.swift */,
+				80148272295EFD39009219FB /* Views */,
+				80148273295EFD49009219FB /* Models */,
+				80FE3ACE2943F44B00D813D8 /* Assets.xcassets */,
+				80FE3AD02943F44B00D813D8 /* Preview Content */,
+			);
+			path = EyeRub;
+			sourceTree = "<group>";
+		};
+		80FE3AD02943F44B00D813D8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				80FE3AD12943F44B00D813D8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		80FE3ADB2943F44B00D813D8 /* EyeRub Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				80FDAD952943FA61006735DD /* EyeRub Watch App.entitlements */,
+				80FDAD962943FA6E006735DD /* EyeRub-Watch-App-Info.plist */,
+				80FDAD932943F98B006735DD /* EyeRubApp.swift */,
+				8062B15B2943F5040036E2DC /* Models */,
+				8062B15C2943F50E0036E2DC /* Views */,
+				802379FE29A9209200D95010 /* MLModels */,
+				80FE3AE02943F44C00D813D8 /* Assets.xcassets */,
+				80FE3AE22943F44C00D813D8 /* Preview Content */,
+			);
+			path = "EyeRub Watch App";
+			sourceTree = "<group>";
+		};
+		80FE3AE22943F44C00D813D8 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				80FE3AE32943F44C00D813D8 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		80FE3AC62943F44B00D813D8 /* EyeRub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80FE3AEB2943F44C00D813D8 /* Build configuration list for PBXNativeTarget "EyeRub" */;
+			buildPhases = (
+				80FE3AC32943F44B00D813D8 /* Sources */,
+				80FE3AC42943F44B00D813D8 /* Frameworks */,
+				80FE3AC52943F44B00D813D8 /* Resources */,
+				80FE3AEA2943F44C00D813D8 /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				80FE3ADA2943F44B00D813D8 /* PBXTargetDependency */,
+			);
+			name = EyeRub;
+			packageProductDependencies = (
+				80F9D80D2A4B3BDC006A0AD8 /* Realm */,
+				80F9D80F2A4B3BDC006A0AD8 /* RealmSwift */,
+				8043986E2A5F25C40002446D /* GoogleSignIn */,
+				804398702A5F25C40002446D /* GoogleSignInSwift */,
+			);
+			productName = HandFaceInteraction;
+			productReference = 80FE3AC72943F44B00D813D8 /* EyeRub.app */;
+			productType = "com.apple.product-type.application";
+		};
+		80FE3AD62943F44B00D813D8 /* EyeRub Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 80FE3AE72943F44C00D813D8 /* Build configuration list for PBXNativeTarget "EyeRub Watch App" */;
+			buildPhases = (
+				80FE3AD32943F44B00D813D8 /* Sources */,
+				80FE3AD42943F44B00D813D8 /* Frameworks */,
+				80FE3AD52943F44B00D813D8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "EyeRub Watch App";
+			productName = "HandFaceInteraction Watch App";
+			productReference = 80FE3AD72943F44B00D813D8 /* EyeRub Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		80FE3ABF2943F44B00D813D8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					80FE3AC62943F44B00D813D8 = {
+						CreatedOnToolsVersion = 14.0;
+					};
+					80FE3AD62943F44B00D813D8 = {
+						CreatedOnToolsVersion = 14.0;
+						LastSwiftMigration = 1400;
+					};
+				};
+			};
+			buildConfigurationList = 80FE3AC22943F44B00D813D8 /* Build configuration list for PBXProject "EyeRub" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 80FE3ABE2943F44B00D813D8;
+			packageReferences = (
+				80F9D80C2A4B3BDC006A0AD8 /* XCRemoteSwiftPackageReference "realm-swift" */,
+				8043986D2A5F25C40002446D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
+			);
+			productRefGroup = 80FE3AC82943F44B00D813D8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				80FE3AC62943F44B00D813D8 /* EyeRub */,
+				80FE3AD62943F44B00D813D8 /* EyeRub Watch App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		80FE3AC52943F44B00D813D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80FE3AD22943F44B00D813D8 /* Preview Assets.xcassets in Resources */,
+				80D0EF7C2A878B6D004A1C42 /* AtlasConfig.plist in Resources */,
+				80FE3ACF2943F44B00D813D8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80FE3AD52943F44B00D813D8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80FE3AE42943F44C00D813D8 /* Preview Assets.xcassets in Resources */,
+				80FE3AE12943F44C00D813D8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		80FE3AC32943F44B00D813D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80AA5DC029AA301700F5CCB1 /* AppMode.swift in Sources */,
+				804AAB922ADF1CFC001E824D /* Action.swift in Sources */,
+				804360D82AAB702100B9DD9E /* AuthentificationController.swift in Sources */,
+				8076A48B2AB59774003D044F /* DeleteAccountButton.swift in Sources */,
+				80FE3ACD2943F44B00D813D8 /* HomeView.swift in Sources */,
+				80D0EF7A2A878B42004A1C42 /* AppConfig.swift in Sources */,
+				80D0EF732A8785E2004A1C42 /* LogoutButton.swift in Sources */,
+				80D0EF722A8785E2004A1C42 /* LoginView.swift in Sources */,
+				803B66AC2A9FBA30004C8892 /* SignInButton.swift in Sources */,
+				807DD470295F619B0012BEFC /* ModelConstants.swift in Sources */,
+				80E60172295CACCA00A32C63 /* WatchConnectivityManager.swift in Sources */,
+				80D0EF752A8785E2004A1C42 /* ErrorView.swift in Sources */,
+				80D0EF742A8785E2004A1C42 /* ContentView.swift in Sources */,
+				8043986A2A5F1D740002446D /* StatisticsView.swift in Sources */,
+				80D0EF762A8785E2004A1C42 /* OpenRealmView.swift in Sources */,
+				804CA2512A5EE5C60009781E /* DailySummaryView.swift in Sources */,
+				80CF69592ADA87F000A904CF /* MonitoredAction.swift in Sources */,
+				800519CA2A4B40E800B3A5B1 /* LabeledAction.swift in Sources */,
+				80FE3ACB2943F44B00D813D8 /* EyeRubApp.swift in Sources */,
+				8076A48D2AB59821003D044F /* ErrorHandler.swift in Sources */,
+				8010A142299EC84E007F3CD9 /* LabelEncoder.swift in Sources */,
+				8043986C2A5F240F0002446D /* GoogleAuthController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		80FE3AD32943F44B00D813D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8062B1732943F6450036E2DC /* StartView.swift in Sources */,
+				8062B1712943F6350036E2DC /* ElapsedTimeView.swift in Sources */,
+				80334F4C2AD73D6600C83002 /* TransformerClassifierRight.mlmodel in Sources */,
+				802379F329A9010000D95010 /* ModeView.swift in Sources */,
+				8062B16B2943F5EE0036E2DC /* SummaryView.swift in Sources */,
+				80B93998298D6BF9005CF083 /* CountdownView.swift in Sources */,
+				80AA5DC129AA301700F5CCB1 /* AppMode.swift in Sources */,
+				807DD471295F619B0012BEFC /* ModelConstants.swift in Sources */,
+				8062B1672943F5C80036E2DC /* LabelsView.swift in Sources */,
+				80A9C1692ADDD72600B19037 /* MonitoringSummaryView.swift in Sources */,
+				802379F729A9037700D95010 /* PredictionsView.swift in Sources */,
+				8062B1652943F5AD0036E2DC /* DataManager.swift in Sources */,
+				807679C1299E4F7A00943263 /* LabelingSummaryView.swift in Sources */,
+				80FDAD942943F98B006735DD /* EyeRubApp.swift in Sources */,
+				80CF695B2ADA96CC00A904CF /* ModeButton.swift in Sources */,
+				8062B1632943F5990036E2DC /* WorkoutManager.swift in Sources */,
+				8010A143299EC84E007F3CD9 /* LabelEncoder.swift in Sources */,
+				802379FB29A91A3000D95010 /* PredictionManager.swift in Sources */,
+				80334F4B2AD73D6600C83002 /* TransformerClassifierLeft.mlmodel in Sources */,
+				8062B1692943F5DF0036E2DC /* SessionPagingView.swift in Sources */,
+				8068818C2AC886900029DC57 /* ModeInfoView.swift in Sources */,
+				80E60173295CACCA00A32C63 /* WatchConnectivityManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		80FE3ADA2943F44B00D813D8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80FE3AD62943F44B00D813D8 /* EyeRub Watch App */;
+			targetProxy = 80FE3AD92943F44B00D813D8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		80FE3AE52943F44C00D813D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		80FE3AE62943F44C00D813D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		80FE3AE82943F44C00D813D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "EyeRub Watch App/EyeRub Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
+				DEVELOPMENT_ASSET_PATHS = "\"EyeRub Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = H424495YM7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EyeRub-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = EyeRub;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Data are collected to be analyzed.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow App to run in background.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.mery.EyeRub;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mery.EyeRub.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Debug;
+		};
+		80FE3AE92943F44C00D813D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "EyeRub Watch App/EyeRub Watch App.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
+				DEVELOPMENT_ASSET_PATHS = "\"EyeRub Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = H424495YM7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "EyeRub-Watch-App-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = EyeRub;
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Data are collected to be analyzed.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow App to run in background.";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.mery.EyeRub;
+				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = NO;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mery.EyeRub.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+			};
+			name = Release;
+		};
+		80FE3AEC2943F44C00D813D8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EyeRub/EyeRub.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
+				DEVELOPMENT_ASSET_PATHS = "\"EyeRub/Preview Content\"";
+				DEVELOPMENT_TEAM = H424495YM7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EyeRub/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EyeRub;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mery.EyeRub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		80FE3AED2943F44C00D813D8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = EyeRub/EyeRub.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0;
+				DEVELOPMENT_ASSET_PATHS = "\"EyeRub/Preview Content\"";
+				DEVELOPMENT_TEAM = H424495YM7;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EyeRub/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = EyeRub;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mery.EyeRub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		80FE3AC22943F44B00D813D8 /* Build configuration list for PBXProject "EyeRub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80FE3AE52943F44C00D813D8 /* Debug */,
+				80FE3AE62943F44C00D813D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80FE3AE72943F44C00D813D8 /* Build configuration list for PBXNativeTarget "EyeRub Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80FE3AE82943F44C00D813D8 /* Debug */,
+				80FE3AE92943F44C00D813D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		80FE3AEB2943F44C00D813D8 /* Build configuration list for PBXNativeTarget "EyeRub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				80FE3AEC2943F44C00D813D8 /* Debug */,
+				80FE3AED2943F44C00D813D8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8043986D2A5F25C40002446D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/google/GoogleSignIn-iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+		80F9D80C2A4B3BDC006A0AD8 /* XCRemoteSwiftPackageReference "realm-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8043986E2A5F25C40002446D /* GoogleSignIn */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8043986D2A5F25C40002446D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignIn;
+		};
+		804398702A5F25C40002446D /* GoogleSignInSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8043986D2A5F25C40002446D /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
+			productName = GoogleSignInSwift;
+		};
+		80F9D80D2A4B3BDC006A0AD8 /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80F9D80C2A4B3BDC006A0AD8 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = Realm;
+		};
+		80F9D80F2A4B3BDC006A0AD8 /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80F9D80C2A4B3BDC006A0AD8 /* XCRemoteSwiftPackageReference "realm-swift" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 80FE3ABF2943F44B00D813D8 /* Project object */;
+}
