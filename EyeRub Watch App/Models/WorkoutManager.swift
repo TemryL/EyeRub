@@ -89,7 +89,7 @@ class WorkoutManager: NSObject, ObservableObject {
 
     func endWorkout() {
         elapsedTime = builder?.elapsedTime
-        session?.end()
+        resetWorkout()
         showingSummaryView = true
     }
     
