@@ -58,7 +58,7 @@ struct ModeView: View {
             )
         }
         .onAppear {
-            speechSynthesizer.speakMessage(message: "Choose a mode to start.")
+            speechSynthesizer.speakMessage(message: " ")
         }
     }
     
