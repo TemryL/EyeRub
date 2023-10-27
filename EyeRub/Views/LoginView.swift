@@ -36,10 +36,13 @@ struct LoginView: View {
                         .textInputAutocapitalization(.never)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal)
+                        .keyboardType(.emailAddress)
+                        .environment(\.colorScheme, .light)
                     
                     SecureField("Password", text: $authentificationController.password)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal)
+                        .environment(\.colorScheme, .light)
                     
                     if !isCreatingAccount {
                         Button(action: {
@@ -63,6 +66,7 @@ struct LoginView: View {
                         SecureField("Confirm Password", text: $confirmedPassword)
                             .textFieldStyle(.roundedBorder)
                             .padding(.horizontal)
+                            .environment(\.colorScheme, .light)
                         
                         Button(action: {
                             // Button pressed, so create account and then log in

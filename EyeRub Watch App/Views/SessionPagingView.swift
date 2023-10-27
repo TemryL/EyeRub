@@ -14,9 +14,9 @@ struct SessionPagingView: View {
     @Environment(\.isLuminanceReduced) var isLuminanceReduced
     @EnvironmentObject var workoutManager: WorkoutManager
     @EnvironmentObject var dataManager: DataManager
+    @EnvironmentObject var speechSynthesizer: SpeechSynthesizer
     @State private var selection: Tab = .central
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    static let speechSynthesizer = AVSpeechSynthesizer()
     var mode: AppMode
     var icon: Image
     var color: Color
@@ -106,12 +106,6 @@ struct SessionPagingView: View {
                 }
             }
             
-            if (mode == .monitoring) {
-//                MonitoringSummaryView().tag(Tab.currentSummary)
-            }
-            else {
-                LabelingSummaryView().tag(Tab.currentSummary)
-            }
         }
         .navigationBarBackButtonHidden(true)
         .onChange(of: workoutManager.running) { _ in
@@ -126,10 +120,6 @@ struct SessionPagingView: View {
                 dismiss()
             }
         }
-//        .onReceive(timer) { time in
-//            timer.upstream.connect().cancel()
-//            displayCentralView()
-//        }
         .onReceive(dataManager.$predictedLabel){
             predictedLabel in alertUser(label: predictedLabel)
         }
@@ -159,37 +149,21 @@ struct SessionPagingView: View {
     func alertUser(label: String) -> Void {
         if mode == .monitoring {
             if (dataManager.monitoredLabel == "All" && label != "Nothing" && label != "N/A") {
-                speakMessage(message: label)
+                speechSynthesizer.speakMessage(message: label)
             }
             else if (label == dataManager.monitoredLabel) {
-                speakMessage(message: label)
+                speechSynthesizer.speakMessage(message: label)
             }
         }
         else {
             if (label != "Nothing") && (label != "N/A") {
                 workoutManager.pause()
-                speakMessage(message: "Face Touching")
+                speechSynthesizer.speakMessage(message: "Face Touching")
     //            WKInterfaceDevice.current().play(.failure)
                 dataManager.showingLabelsView = true
             }
         }
     }
-    
-    func speakMessage(message: String) {
-        let speechUtterance = AVSpeechUtterance(string: message)
-        speechUtterance.rate = 0.5
-        
-        let samanthaVoiceID = "com.apple.voice.compact.en-US.Samantha"
-        let availableVoices = AVSpeechSynthesisVoice.speechVoices()
-
-        if availableVoices.first(where: { $0.identifier == samanthaVoiceID }) != nil {
-            let samanthaVoice = AVSpeechSynthesisVoice(identifier: "com.apple.voice.compact.en-US.Samantha")
-            speechUtterance.voice = samanthaVoice
-        }
-        
-        SessionPagingView.speechSynthesizer.speak(speechUtterance)
-    }
-    
 }
 
 //struct SessionPagingView_Previews: PreviewProvider {

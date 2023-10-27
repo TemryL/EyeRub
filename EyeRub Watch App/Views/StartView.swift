@@ -13,6 +13,7 @@ import WatchConnectivity
 struct StartView: View {
     @EnvironmentObject var dataManager: DataManager
     @EnvironmentObject var workoutManager: WorkoutManager
+    @EnvironmentObject var speechSynthesizer: SpeechSynthesizer
     @ObservedObject private var connectivityManager = WatchConnectivityManager.shared
     @AppStorage("isAuthenticated") private var isAuthenticated = false
     

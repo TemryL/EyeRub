@@ -6,12 +6,12 @@
 //
 
 import SwiftUI
-import AVFoundation
 
 @main
 struct EyeRub_Watch_App: App {
     @StateObject private var dataManager = DataManager()
     @StateObject private var workoutManager = WorkoutManager()
+    @StateObject private var speechSynthesizer = SpeechSynthesizer()
     
     @SceneBuilder var body: some Scene {
         WindowGroup {
@@ -29,6 +29,7 @@ struct EyeRub_Watch_App: App {
             }
             .environmentObject(dataManager)
             .environmentObject(workoutManager)
+            .environmentObject(speechSynthesizer)
         }
     }
 }

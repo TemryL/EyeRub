@@ -24,10 +24,17 @@ struct SummaryView: View {
                                   value: durationFormatter.string(from: workoutManager.elapsedTime ?? 0.0) ?? "")
                 .foregroundStyle(Color("veryLightBlue"))
                 
-                SummaryMetricView(title: "Total \(dataManager.appMode == .monitoring ? "Monitored":"Labeled") Actions",
-                                  value: String(dataManager.numberLabeledActions)
-                )
-                .foregroundStyle(dataManager.appMode == .monitoring ? .red : .blue)
+                if dataManager.appMode == .monitoring {
+                    SummaryMetricView(title: "Total Monitored Actions",
+                                      value: String(dataManager.numberMonitoredActions)
+                    )
+                    .foregroundStyle(.red)
+                } else {
+                    SummaryMetricView(title: "Total Labeled Actions",
+                                      value: String(dataManager.numberLabeledActions)
+                    )
+                    .foregroundStyle(.blue)
+                }
                 
                 Button("Done") {
                     WKInterfaceDevice.current().play(.success)

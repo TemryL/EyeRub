@@ -105,6 +105,8 @@ struct HomeView: View {
                         }
                 }
             }
+            .toolbarBackground(.visible, for: .navigationBar)
+            .toolbarBackground(Color("veryLightBlue"))
             .onReceive(connectivityManager.$message){
                 message in
                 if let message = message {

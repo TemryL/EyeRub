@@ -27,18 +27,30 @@ class PredictionManager {
             fatalError("Couldn't create activityClassifier")
         }
     }()
-    
-    func performModelPrediction(data: MLMultiArray, wristLocation: WKInterfaceDeviceWristLocation) -> String {
+        
+    func performModelPrediction(data: MLMultiArray, wristLocation: WKInterfaceDeviceWristLocation, threshold: Float) -> String {
         var predictedLabel: String
-        var label: Int32
+        var classProba: MLMultiArray
+        var label: Int
         
         switch wristLocation {
         case .left:
             let prediction = try! activityClassifierLeft.prediction(input:data)
-            label = Int32(truncating: prediction.output[0])
+            classProba = prediction.output
         case .right:
             let prediction = try! activityClassifierRight.prediction(input:data)
-            label = Int32(truncating: prediction.output[0])
+            classProba = prediction.output
+        }
+        
+        if let (maxIndex, maxValue) = getMaxIndexAndValue(classProba) {
+            if maxValue > threshold {
+                label = maxIndex
+                print(maxValue)
+            } else {
+                label = 4
+            }
+        } else {
+            label = 5
         }
         
         switch label {
@@ -57,5 +69,24 @@ class PredictionManager {
         }
         print(predictedLabel)
         return predictedLabel
+    }
+
+    func getMaxIndexAndValue(_ multiArray: MLMultiArray) -> (Int, Float)? {
+        guard let pointer = try? UnsafeBufferPointer<Float>(multiArray) else {
+            return nil
+        }
+        
+        let array = Array(pointer)
+        var maxIndex = 0
+        var maxValue = array[0]
+
+        for i in 1..<multiArray.count {
+            if array[i] > maxValue {
+                maxIndex = i
+                maxValue = array[i]
+            }
+        }
+
+        return (maxIndex, maxValue)
     }
 }

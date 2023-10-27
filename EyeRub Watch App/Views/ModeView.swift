@@ -18,6 +18,7 @@ struct ModeView: View {
     @State private var showingAlert = false
     @Environment(\.dismiss) var dismiss
     @EnvironmentObject var dataManager: DataManager
+    @EnvironmentObject var speechSynthesizer: SpeechSynthesizer
     
     let items = [
         Item(mode: .manualLabeling, title: "Manual", color: .mint),
@@ -56,7 +57,9 @@ struct ModeView: View {
                   dismissButton: .default(Text("Got it!"), action: { dismiss() })
             )
         }
-//        SessionPagingView(mode: .monitoring)
+        .onAppear {
+            speechSynthesizer.speakMessage(message: "Choose a mode to start.")
+        }
     }
     
 }

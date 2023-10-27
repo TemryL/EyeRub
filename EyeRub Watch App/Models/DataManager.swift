@@ -44,10 +44,11 @@ class DataManager: ObservableObject {
                         "Skin scratching":0,
                         "Teeth brushing":0]
     
-    var label : String = "N/A"
+    var label: String = "N/A"
+    @Published var threshold: Float = 0.95
     @Published var appMode = AppMode.notSet
-    @Published var predictedLabel : String = "N/A"
-    @Published var monitoredLabel : String = "notSet"
+    @Published var predictedLabel: String = "N/A"
+    @Published var monitoredLabel: String = "notSet"
     @Published var monitoredSamples = [MonitoredSample]()
     @Published var isDataArrayFull: Bool = false
     @Published var showingLabelsView: Bool = false
@@ -91,6 +92,7 @@ class DataManager: ObservableObject {
     func initSession(mode: AppMode) {
         appMode = mode
         numberLabeledActions = 0
+        numberMonitoredActions = 0
         summaryCount = ["Nothing":0,
                             "Eye rubbing":0,
                             "Eye touching":0,
@@ -185,7 +187,7 @@ class DataManager: ObservableObject {
             
         case .semiAutomaticLabeling:
             if (currentIndexInPredictionWindow == ModelConstants.windowSize) {
-                predictedLabel = predictionManager.performModelPrediction(data: sensorDataArray, wristLocation: device.wristLocation)
+                predictedLabel = predictionManager.performModelPrediction(data: sensorDataArray, wristLocation: device.wristLocation, threshold: threshold)
                 if (predictedLabel != "Nothing") && (predictedLabel != "N/A") {
                     reset()
                 }
@@ -196,16 +198,14 @@ class DataManager: ObservableObject {
         
         case .monitoring:
             if (currentIndexInPredictionWindow == ModelConstants.windowSize) {
-                predictedLabel = predictionManager.performModelPrediction(data: sensorDataArray, wristLocation: device.wristLocation)
+                predictedLabel = predictionManager.performModelPrediction(data: sensorDataArray, wristLocation: device.wristLocation, threshold: threshold)
                 
                 if (monitoredLabel == "All" && predictedLabel != "Nothing") {
                     addToSessionData(label: predictedLabel)
-                    numberMonitoredActions += 1
                     resetWindow()
                 }
                 else if (predictedLabel == monitoredLabel) {
                     addToSessionData(label: predictedLabel)
-                    numberMonitoredActions += 1
                     resetWindow()
                 }
                 else {

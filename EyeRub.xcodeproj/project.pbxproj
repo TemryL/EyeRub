@@ -13,8 +13,9 @@
 		802379F329A9010000D95010 /* ModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802379F229A9010000D95010 /* ModeView.swift */; };
 		802379F729A9037700D95010 /* PredictionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802379F629A9037700D95010 /* PredictionsView.swift */; };
 		802379FB29A91A3000D95010 /* PredictionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802379FA29A91A3000D95010 /* PredictionManager.swift */; };
-		80334F4B2AD73D6600C83002 /* TransformerClassifierLeft.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 80334F492AD73D6600C83002 /* TransformerClassifierLeft.mlmodel */; };
-		80334F4C2AD73D6600C83002 /* TransformerClassifierRight.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 80334F4A2AD73D6600C83002 /* TransformerClassifierRight.mlmodel */; };
+		802608002AEBAB550024E62B /* TransformerClassifierLeft.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 802607FE2AEBAB550024E62B /* TransformerClassifierLeft.mlmodel */; };
+		802608012AEBAB550024E62B /* TransformerClassifierRight.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 802607FF2AEBAB550024E62B /* TransformerClassifierRight.mlmodel */; };
+		802608272AEBD32E0024E62B /* SpeechSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 802608262AEBD32E0024E62B /* SpeechSynthesizer.swift */; };
 		803B66AC2A9FBA30004C8892 /* SignInButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803B66AB2A9FBA30004C8892 /* SignInButton.swift */; };
 		804360D82AAB702100B9DD9E /* AuthentificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804360D72AAB702100B9DD9E /* AuthentificationController.swift */; };
 		8043986A2A5F1D740002446D /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804398692A5F1D740002446D /* StatisticsView.swift */; };
@@ -93,9 +94,10 @@
 		802379F229A9010000D95010 /* ModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeView.swift; sourceTree = "<group>"; };
 		802379F629A9037700D95010 /* PredictionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionsView.swift; sourceTree = "<group>"; };
 		802379FA29A91A3000D95010 /* PredictionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PredictionManager.swift; sourceTree = "<group>"; };
+		802607FE2AEBAB550024E62B /* TransformerClassifierLeft.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TransformerClassifierLeft.mlmodel; sourceTree = "<group>"; };
+		802607FF2AEBAB550024E62B /* TransformerClassifierRight.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TransformerClassifierRight.mlmodel; sourceTree = "<group>"; };
+		802608262AEBD32E0024E62B /* SpeechSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechSynthesizer.swift; sourceTree = "<group>"; };
 		80320A562AE3D8440047515D /* EyeRub.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = EyeRub.entitlements; sourceTree = "<group>"; };
-		80334F492AD73D6600C83002 /* TransformerClassifierLeft.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TransformerClassifierLeft.mlmodel; sourceTree = "<group>"; };
-		80334F4A2AD73D6600C83002 /* TransformerClassifierRight.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = TransformerClassifierRight.mlmodel; sourceTree = "<group>"; };
 		803B66AB2A9FBA30004C8892 /* SignInButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInButton.swift; sourceTree = "<group>"; };
 		804360D72AAB702100B9DD9E /* AuthentificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthentificationController.swift; sourceTree = "<group>"; };
 		804398692A5F1D740002446D /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
@@ -196,8 +198,8 @@
 		802379FE29A9209200D95010 /* MLModels */ = {
 			isa = PBXGroup;
 			children = (
-				80334F492AD73D6600C83002 /* TransformerClassifierLeft.mlmodel */,
-				80334F4A2AD73D6600C83002 /* TransformerClassifierRight.mlmodel */,
+				802607FE2AEBAB550024E62B /* TransformerClassifierLeft.mlmodel */,
+				802607FF2AEBAB550024E62B /* TransformerClassifierRight.mlmodel */,
 			);
 			path = MLModels;
 			sourceTree = "<group>";
@@ -220,6 +222,7 @@
 				80CF695A2ADA96CC00A904CF /* ModeButton.swift */,
 				8068818B2AC886900029DC57 /* ModeInfoView.swift */,
 				8062B1682943F5DF0036E2DC /* SessionPagingView.swift */,
+				802608262AEBD32E0024E62B /* SpeechSynthesizer.swift */,
 				80A9C1682ADDD72600B19037 /* MonitoringSummaryView.swift */,
 				8062B1702943F6350036E2DC /* ElapsedTimeView.swift */,
 				802379F629A9037700D95010 /* PredictionsView.swift */,
@@ -459,9 +462,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				802608272AEBD32E0024E62B /* SpeechSynthesizer.swift in Sources */,
 				8062B1732943F6450036E2DC /* StartView.swift in Sources */,
 				8062B1712943F6350036E2DC /* ElapsedTimeView.swift in Sources */,
-				80334F4C2AD73D6600C83002 /* TransformerClassifierRight.mlmodel in Sources */,
 				802379F329A9010000D95010 /* ModeView.swift in Sources */,
 				8062B16B2943F5EE0036E2DC /* SummaryView.swift in Sources */,
 				80B93998298D6BF9005CF083 /* CountdownView.swift in Sources */,
@@ -469,15 +472,16 @@
 				807DD471295F619B0012BEFC /* ModelConstants.swift in Sources */,
 				8062B1672943F5C80036E2DC /* LabelsView.swift in Sources */,
 				80A9C1692ADDD72600B19037 /* MonitoringSummaryView.swift in Sources */,
+				802608002AEBAB550024E62B /* TransformerClassifierLeft.mlmodel in Sources */,
 				802379F729A9037700D95010 /* PredictionsView.swift in Sources */,
 				8062B1652943F5AD0036E2DC /* DataManager.swift in Sources */,
 				807679C1299E4F7A00943263 /* LabelingSummaryView.swift in Sources */,
 				80FDAD942943F98B006735DD /* EyeRubApp.swift in Sources */,
 				80CF695B2ADA96CC00A904CF /* ModeButton.swift in Sources */,
 				8062B1632943F5990036E2DC /* WorkoutManager.swift in Sources */,
+				802608012AEBAB550024E62B /* TransformerClassifierRight.mlmodel in Sources */,
 				8010A143299EC84E007F3CD9 /* LabelEncoder.swift in Sources */,
 				802379FB29A91A3000D95010 /* PredictionManager.swift in Sources */,
-				80334F4B2AD73D6600C83002 /* TransformerClassifierLeft.mlmodel in Sources */,
 				8062B1692943F5DF0036E2DC /* SessionPagingView.swift in Sources */,
 				8068818C2AC886900029DC57 /* ModeInfoView.swift in Sources */,
 				80E60173295CACCA00A32C63 /* WatchConnectivityManager.swift in Sources */,
