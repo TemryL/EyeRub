@@ -6,7 +6,7 @@ import AuthenticationServices
 struct LoginView: View {
     @State var confirmedPassword = ""
     @Environment(\.dismiss) var dismiss
-    
+    @Environment(\.colorScheme) var colorScheme
     @State private var isLoggingIn = false
     @State private var isCreatingAccount = false
     @State private var isResetingPassword = false
@@ -37,12 +37,12 @@ struct LoginView: View {
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal)
                         .keyboardType(.emailAddress)
-                        .environment(\.colorScheme, .light)
+//                        .environment(\.colorScheme, .light)
                     
                     SecureField("Password", text: $authentificationController.password)
                         .textFieldStyle(.roundedBorder)
                         .padding(.horizontal)
-                        .environment(\.colorScheme, .light)
+//                        .environment(\.colorScheme, .light)
                     
                     if !isCreatingAccount {
                         Button(action: {
@@ -66,7 +66,7 @@ struct LoginView: View {
                         SecureField("Confirm Password", text: $confirmedPassword)
                             .textFieldStyle(.roundedBorder)
                             .padding(.horizontal)
-                            .environment(\.colorScheme, .light)
+//                            .environment(\.colorScheme, .light)
                         
                         Button(action: {
                             // Button pressed, so create account and then log in
@@ -144,7 +144,7 @@ struct LoginView: View {
                                 }
                             }
                         )
-                        .signInWithAppleButtonStyle(.black)
+                        .signInWithAppleButtonStyle(colorScheme == .light ? .black : .white)
                         .frame(maxWidth: .infinity)
                         .frame(height: 40)
                         .padding(.horizontal)

@@ -48,10 +48,7 @@ struct HomeView: View {
                             }
                         }
                     }
-                    
-                    
                 }
-                .navigationTitle("Labeled Actions")
                 .tabItem {
                     VStack {
                         Text("Labeling")
@@ -84,7 +81,6 @@ struct HomeView: View {
                         }
                     }
                 }
-                .navigationTitle("Monitored Actions")
                 .tabItem {
                     VStack {
                         Text("Monitoring")
@@ -105,8 +101,6 @@ struct HomeView: View {
                         }
                 }
             }
-            .toolbarBackground(.visible, for: .navigationBar)
-            .toolbarBackground(Color("veryLightBlue"))
             .onReceive(connectivityManager.$message){
                 message in
                 if let message = message {

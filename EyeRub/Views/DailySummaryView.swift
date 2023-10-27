@@ -24,6 +24,16 @@ struct DailySummaryView: View {
         return formatter
     }()
     
+    let colorEncoder: [String:Color] = ["Nothing": .green,
+                                        "Eye rubbing": .red,
+                                        "Eye touching": .orange,
+                                        "Glasses readjusting": .orange,
+                                        "Eating": .orange,
+                                        "Make up": .orange,
+                                        "Hair combing": .purple,
+                                        "Skin scratching": .purple,
+                                        "Teeth brushing": .blue]
+    
     var body: some View {
         VStack {
             List {
@@ -34,8 +44,8 @@ struct DailySummaryView: View {
                 Section("Records") {
                     ForEach(actions, id: \._id) { action in
                         HStack {
-                            Image(systemName: "checkmark.circle.fill")
-                                .foregroundColor(.green)
+                            Image(systemName: "waveform.path")
+                                .foregroundColor(colorEncoder[action.label])
                             
                             Text(action.label)
                                 .fontWeight(.semibold)

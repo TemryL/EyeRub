@@ -21,7 +21,7 @@ struct OpenRealmView: View {
         case .connecting:
             // Starting the Realm.autoOpen process.
             // Show a progress view.
-            ProgressView()
+            ProgressView("Connecting to database...")
             
         case .waitingForUser:
             // Waiting for a user to be logged in before executing
@@ -36,12 +36,13 @@ struct OpenRealmView: View {
                     .environment(\.realm, realm)
                     .navigationTitle("Home")
             }
+            .accentColor(Color("lightBlue"))
 
             
         case .progress(let progress):
             // The realm is currently being downloaded from the server.
             // Show a progress view.
-            ProgressView(progress)
+            ProgressView("Downloading data from server...")
             
         case .error(let error):
             // Opening the Realm failed.

@@ -41,7 +41,7 @@ struct ContentView: View {
         } else {
             // If there is no user logged in, show the login view.
             ZStack {
-                LinearGradient(gradient: Gradient(colors: [Color("lightPurple"), Color("veryLightBlue"), Color("lightBlue")]), startPoint: .topLeading, endPoint: .bottomTrailing)
+//                LinearGradient(gradient: Gradient(colors: [Color("lightPurple"), Color("veryLightBlue"), Color("lightBlue")]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 
                 LoginView()
                     .environmentObject(authentificationController)

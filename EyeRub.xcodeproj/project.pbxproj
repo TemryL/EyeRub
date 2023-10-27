@@ -618,7 +618,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "EyeRub Watch App/EyeRub Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"EyeRub Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = H424495YM7;
 				ENABLE_PREVIEWS = YES;
@@ -655,7 +655,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = "EyeRub Watch App/EyeRub Watch App.entitlements";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"EyeRub Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = H424495YM7;
 				ENABLE_PREVIEWS = YES;
@@ -692,7 +692,7 @@
 				CODE_SIGN_ENTITLEMENTS = EyeRub/EyeRub.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"EyeRub/Preview Content\"";
 				DEVELOPMENT_TEAM = H424495YM7;
 				ENABLE_PREVIEWS = YES;
@@ -729,7 +729,7 @@
 				CODE_SIGN_ENTITLEMENTS = EyeRub/EyeRub.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"EyeRub/Preview Content\"";
 				DEVELOPMENT_TEAM = H424495YM7;
 				ENABLE_PREVIEWS = YES;
