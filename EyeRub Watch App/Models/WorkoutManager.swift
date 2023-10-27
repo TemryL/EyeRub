@@ -89,7 +89,6 @@ class WorkoutManager: NSObject, ObservableObject {
 
     func endWorkout() {
         elapsedTime = builder?.elapsedTime
-//        resetWorkout()
         session?.end()
         showingSummaryView = true
     }
@@ -113,16 +112,16 @@ extension WorkoutManager: HKWorkoutSessionDelegate {
             self.running = toState == .running
         }
 
-        // Wait for the session to transition states before ending the builder.
-        if toState == .ended {
-            builder?.endCollection(withEnd: date) { (success, error) in
-                self.builder?.finishWorkout { (workout, error) in
-                    DispatchQueue.main.async {
-                        self.workout = workout
-                    }
-                }
-            }
-        }
+//        // Wait for the session to transition states before ending the builder.
+//        if toState == .ended {
+//            builder?.endCollection(withEnd: date) { (success, error) in
+//                self.builder?.finishWorkout { (workout, error) in
+//                    DispatchQueue.main.async {
+//                        self.workout = workout
+//                    }
+//                }
+//            }
+//        }
     }
 
     func workoutSession(_ workoutSession: HKWorkoutSession, didFailWithError error: Error) {
